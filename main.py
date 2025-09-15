@@ -43,5 +43,6 @@ def main():
             print("\nError: No se puede dividir por cero\n")
         else:
             print(f"El resultado es: {resultado}\n\n")
-    
+    print("Gracias por usar la calculadora.")
+if __name__ == "__main__":
 main()
