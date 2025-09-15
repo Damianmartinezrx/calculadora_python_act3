@@ -38,10 +38,10 @@ def main():
                     print("Opcion invalida. Por favor, seleccione una opcion valida (1-5)./n")
                     
         except ValueError:
-            print("Error: Debe ingresar un numero valido")
+            print("\nError: Debe ingresar un numero valido\n")
         except ZeroDivisionError:
-            print("Error: No se puede dividir por cero")
+            print("\nError: No se puede dividir por cero\n")
         else:
-            print(f"El resultado es: {resultado}")
+            print(f"El resultado es: {resultado}\n\n")
     
 main()
