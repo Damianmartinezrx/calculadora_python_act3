@@ -20,6 +20,8 @@ def main():
         menu()
         try:    
             option = int(input("\nSeleccione una opcion (1-5): "))
+            if option == 5:
+                break
             num1 = float(input("Ingrese el primer numero: "))
             num2 = float(input("Ingrese el segundo numero: "))          
             match option:
@@ -30,10 +32,7 @@ def main():
                 case 3:
                     resulta=multiplicacion(num1, num2  )
                 case 4:
-                    resultado=division(num1, num2  )      
-                case 5:   
-                    print("Saliendo de la calculadora. ¡Hasta luego!")
-                    break   
+                    resultado=division(num1, num2  )        
                 case _:
                     print("Opcion invalida. Por favor, seleccione una opcion valida (1-5)./n")
                     
