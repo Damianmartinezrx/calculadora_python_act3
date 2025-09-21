@@ -1,10 +1,15 @@
 import pytest
 from main import suma, resta, multiplicacion, division
 
-def test_suma():
-    assert suma(3, 2) == 5
-    assert suma(-1, 1) == 0
-    assert suma(-1, -1) == -2
+
+@pytest.mark.parametrize("a, b, expected", [
+    (3, 2, 5),
+    (-1, 1, 0),
+    (-1, -1, -2)
+])
+def test_suma(a, b, expected):
+    assert suma(a, b) == expected
+
 
 def test_resta():
     assert resta(3, 2) == 1
@@ -20,3 +25,12 @@ def test_division():
     assert division(3, 2) == 1.5
     assert division(-1, 1) == -1
     assert division(-1, -1) == 1    
+
+@pytest.mark.parametrize("a, b", [
+    (1, 0),
+    (0, 0),
+    (-1, 0) 
+])
+def test_division_por_cero(a, b):
+    with pytest.raises(ZeroDivisionError):
+        division(a, b)
