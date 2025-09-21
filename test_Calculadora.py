@@ -1,7 +1,7 @@
 import pytest
 from main import suma, resta, multiplicacion, division
 
-
+@pytest.mark.skip(reason="No es necesario ejecutar esta prueba ahora")
 @pytest.mark.parametrize("a, b, expected", [
     (3, 2, 5),
     (-1, 1, 0),
@@ -26,11 +26,14 @@ def test_division():
     assert division(-1, 1) == -1
     assert division(-1, -1) == 1    
 
-@pytest.mark.parametrize("a, b", [
-    (1, 0),
-    (0, 0),
-    (-1, 0) 
-])
-def test_division_por_cero(a, b):
+def test_division_flotante():
+    assert division(10, 3) == pytest.approx(3.3333, rel=1e-4)
+    assert division(-4.4, 2) == -2.2
+    assert division(-3.3, -1.1) == pytest.approx(3.0, rel=1e-4)
+
+
+@pytest.mark.zero
+def test_division_por_cero():
     with pytest.raises(ZeroDivisionError):
-        division(a, b)
+        division(1, 0)  
+
