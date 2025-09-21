@@ -43,6 +43,6 @@ def main():
         else:
             print(f"El resultado es: {resultado}\n\n")
     print("Gracias por usar la calculadora.")
-main()
+
 
 print("Fin del programa")   
