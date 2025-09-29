@@ -1,0 +1,70 @@
+/* Reset mínimo */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Centrar el bloque en la pantalla */
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #f4f6f8;
+}
+
+/* Contenedor principal (formulario) */
+form {
+  background-color: #fff;
+  padding: 20px 30px;
+  border-radius: 12px; /* Bordes redondeados */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra ligera */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 300px;
+}
+
+/* Labels e inputs */
+label {
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Radios */
+.radios {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.radio-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Botón azul */
+#btn-calcular {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #0275d8;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#btn-calcular:hover {
+  background-color: #025aa5; /* Más oscuro al pasar el mouse */
+}
